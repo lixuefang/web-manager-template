@@ -1,0 +1,27 @@
+/*!
+ author:lixuefang
+*/
+
+/*
+    通用样式
+*/
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/*登录样式*/
+.login-bg{
+    background:url('../images/login-bg.jpg') no-repeat;
+}
+
+.login-content{
+    width: 400px;
+    margin: 5% auto 0 auto;
+    background: #eeeeee;
+}
+
+.login-top{
+    padding: 15px 20px;
+    background: #e9e9e9;
+}
