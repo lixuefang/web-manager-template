@@ -3,18 +3,57 @@
 */
 
 /*
-    通用样式
+    公共样式
 */
-*{
-    margin:0px;
-    padding:0px;
+.content{
+    padding: 15px 20px;
 }
-
-/*登录样式*/
+.form-group{
+    margin-bottom:15px;
+}
+.input-text{
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.input-icon{
+    width: 100%;
+    padding: 12px 8px 12px 30px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.icon-input{
+    display: block;
+    position: absolute;
+    margin: 10px 2px 4px 10px;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+.btn{
+    padding: 6px 12px;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+}
+.btn-success{
+    color: #ffffff;
+    background-color: #5cb85c;
+    border-color: #55b555;
+}
+/*login */
 .login-bg{
     background:url('../images/login-bg.jpg') no-repeat;
 }
-
 .login-content{
     width: 400px;
     margin: 5% auto 0 auto;
@@ -24,4 +63,64 @@
 .login-top{
     padding: 15px 20px;
     background: #e9e9e9;
+}
+
+/*home */
+.home-header-title{
+    width: 250px;
+    background: #2f4355;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    color:#ffffff;
+}
+
+.home-header-nav{
+    height: 50px;
+    background: #2a3b4c;
+}
+
+.header-search-input{
+    height: 100%;
+    border: 0;
+    background: transparent !important;
+    padding-left: 0;
+    margin-left: 12px;
+    text-indent: -999999px;
+    color: #efefef;
+}
+.home-header-nav ul{
+    float: right;
+}
+.home-header-nav li{
+    float: left;
+}
+.home-left{
+    float: left;
+    width:250px;
+    background: #33485c;
+}
+.home-person{
+    padding: 15px;
+}
+.home-person li{
+    float: left;
+}
+.home-person-img{
+    float: left;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+.home-person-img img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.home-footer{
+    padding: 7px 20px;
+    background-color: #2a3b4c;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: right;
 }

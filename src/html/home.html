@@ -1,25 +1,1082 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html,charset=utf-8"/>
-        <meta name="keyword" content="后台模板" />
-        <meta name="description" content="这是一个 react 实现的 spa 后台通用模板" />
-        <link href="../css/site.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-        <div class="home-left">
-            <div class="home-webTitle"></div>
-            <div class="home-nav"></div>
+
+<head>
+    <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+    <meta name="keyword" content="后台模板" />
+    <meta name="description" content="这是一个 react 实现的 spa 后台通用模板" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link href="../css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <div class="home-header-title">Smadle WebManager</div>
+        <div class="home-header-nav">
+            <span>
+                <input type="text" class="header-search-input" />
+                <i class="fa fa-search"></i>
+            </span>
+            <ul>
+                <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span
+                            class="badge badge-green">3</span></a>
+                </li>
+                <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-envelope fa-fw"></i><span
+                            class="badge badge-orange">7</span></a>
+                </li>
+                <li class="dropdown topbar-user">
+                    <a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg"
+                            alt="" class="img-responsive img-circle">&nbsp;<span class="hidden-xs">John Doe</span>&nbsp;<span
+                            class="caret"></span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="home-right">
-            <div class="home-top"></div>
-            <div class="home-main">
-                <div class="home-title"></div>
-                <div class="home-content"></div>
+    </div>
+    <div>
+        <div class="home-left">
+            <div class="home-person">
+                <div class="home-person-img">
+                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" alt="">
+                </div>
+                <div class="info">
+                    <p>John Doe</p>
+                    <ul>
+                        <li>
+                            <a href="extra-profile.html" ><i class="fa fa-user"></i></a>
+                        </li>
+                        <li>
+                            <a href="email-inbox.html" ><i class="fa fa-envelope"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" ><i class="fa fa-cog"></i></a>
+                        </li>
+                        <li>
+                            <a href="extra-signin.html" ><i class="fa fa-sign-out"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="home-nav">
+                <ul id="side-menu" class="nav">
+                    <li class="active"><a href="index.html"><i class="fa fa-tachometer fa-fw">
+                                <div class="icon-bg bg-orange"></div>
+                            </i><span class="menu-title">Dashboard</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-laptop fa-fw">
+                                <div class="icon-bg bg-pink"></div>
+                            </i><span class="menu-title">Frontend</span><span class="fa arrow"></span><span class="label label-yellow">v3.0</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="frontend-one-page.html"><i class="fa fa-rocket"></i><span class="submenu-title">One
+                                        Page</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-desktop fa-fw">
+                                <div class="icon-bg bg-pink"></div>
+                            </i><span class="menu-title">Layouts</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="layout-left-sidebar.html"><i class="fa fa-align-left"></i><span class="submenu-title">Left
+                                        Sidebar</span></a>
+                            </li>
+                            <li><a href="layout-left-sidebar-collapsed.html"><i class="fa fa-angle-double-left"></i><span
+                                        class="submenu-title">Left Sidebar Collapsed</span></a>
+                            </li>
+                            <li><a href="layout-right-sidebar.html"><i class="fa fa-align-right"></i><span class="submenu-title">Right
+                                        Sidebar</span></a>
+                            </li>
+                            <li><a href="layout-right-sidebar-collapsed.html"><i class="fa fa-angle-double-right"></i><span
+                                        class="submenu-title">Right Sidebar Collapsed</span></a>
+                            </li>
+                            <li><a href="layout-horizontal-menu.html"><i class="fa fa-header"></i><span class="submenu-title">Horizontal
+                                        Menu</span></a>
+                            </li>
+                            <li><a href="layout-horizontal-menu-sidebar.html"><i class="fa fa-h-square"></i><span class="submenu-title">Horizontal
+                                        Menu &amp; Sidebar</span></a>
+                            </li>
+                            <li><a href="layout-fixed-topbar.html"><i class="fa fa-magnet"></i><span class="submenu-title">Fixed
+                                        Topbar</span></a>
+                            </li>
+                            <li><a href="layout-boxed.html"><i class="fa fa-columns"></i><span class="submenu-title">Boxed
+                                        Layout</span></a>
+                            </li>
+                            <li><a href="layout-hidden-footer.html"><i class="fa fa-eye-slash"></i><span class="submenu-title">Hidden
+                                        Footer</span></a>
+                            </li>
+                            <li><a href="layout-header-topbar.html"><i class="fa fa-paperclip"></i><span class="submenu-title">Header
+                                        &amp; Topbar</span></a>
+                            </li>
+                            <li><a href="layout-title-breadcrumb.html"><i class="fa fa-link"></i><span class="submenu-title">Title
+                                        &amp; Breadcrumb</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-send-o fa-fw">
+                                <div class="icon-bg bg-green"></div>
+                            </i><span class="menu-title">UI Elements</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="ui-generals.html"><i class="fa fa-briefcase"></i><span class="submenu-title">Generals</span></a>
+                            </li>
+                            <li><a href="ui-portlets.html"><i class="fa fa-instagram"></i><span class="submenu-title">Portlets</span></a>
+                            </li>
+                            <li><a href="ui-buttons.html"><i class="fa fa-hand-o-up"></i><span class="submenu-title">Buttons</span></a>
+                            </li>
+                            <li><a href="ui-tabs.html"><i class="fa fa-trello"></i><span class="submenu-title">Tabs</span></a>
+                            </li>
+                            <li><a href="ui-progressbars.html"><i class="fa fa-ellipsis-h"></i><span class="submenu-title">Progress
+                                        Bars</span></a>
+                            </li>
+                            <li><a href="ui-typography.html"><i class="fa fa-font"></i><span class="submenu-title">Typography</span></a>
+                            </li>
+                            <li><a href="ui-modals.html"><i class="fa fa-list-alt"></i><span class="submenu-title">Modals</span></a>
+                            </li>
+                            <li><a href="ui-sliders.html"><i class="fa fa-arrows-h"></i><span class="submenu-title">Sliders</span></a>
+                            </li>
+                            <li><a href="ui-icons.html"><i class="fa fa-tint"></i><span class="submenu-title">Icons</span></a>
+                            </li>
+                            <li><a href="ui-checkbox-radio.html"><i class="fa fa-dot-circle-o"></i><span class="submenu-title">Checkbox
+                                        &amp; Radio</span></a>
+                            </li>
+                            <li><a href="ui-panels.html"><i class="fa fa-th-large"></i><span class="submenu-title">Panels</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-rocket fa-fw">
+                                <div class="icon-bg bg-green"></div>
+                            </i><span class="menu-title">UI Advanced</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="ui-preloader.html"><i class="fa fa-spinner"></i><span class="submenu-title">Preloader</span><span
+                                        class="label label-yellow">v4.1</span></a>
+                            </li>
+                            <li><a href="ui-editors.html"><i class="fa fa-edit"></i><span class="submenu-title">Editors</span></a>
+                            </li>
+                            <li><a href="ui-nestable-list.html"><i class="fa fa-list-ol"></i><span class="submenu-title">Nestable
+                                        List</span></a>
+                            </li>
+                            <li><a href="ui-dropdown-select.html"><i class="fa fa-level-down"></i><span class="submenu-title">Dropdown
+                                        Select</span><span class="label label-yellow">v2.1</span></a>
+                            </li>
+                            <li><a href="ui-notific8-notifications.html"><i class="fa fa-exclamation-circle"></i><span
+                                        class="submenu-title">Notific8 &amp; Message</span><span class="label label-blue">v2.1</span></a>
+                            </li>
+                            <li><a href="ui-toastr-notifications.html"><i class="fa fa-exclamation-triangle"></i><span
+                                        class="submenu-title">Toastr Notifications</span></a>
+                            </li>
+                            <li><a href="ui-treeview.html"><i class="fa fa-tasks"></i><span class="submenu-title">Tree
+                                        View</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-edit fa-fw">
+                                <div class="icon-bg bg-violet"></div>
+                            </i><span class="menu-title">Forms</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="form-layouts.html"><i class="fa fa-columns"></i><span class="submenu-title">Form
+                                        Layouts</span></a>
+                            </li>
+                            <li><a href="form-basic.html"><i class="fa fa-file-text-o"></i><span class="submenu-title">Form
+                                        Basics</span></a>
+                            </li>
+                            <li><a href="form-components.html"><i class="fa fa-cube"></i><span class="submenu-title">Form
+                                        Components</span></a>
+                            </li>
+                            <li><a href="form-xeditable.html"><i class="fa fa-edit"></i><span class="submenu-title">Form
+                                        X-editable</span></a>
+                            </li>
+                            <li><a href="form-wizard.html"><i class="fa fa-magic"></i><span class="submenu-title">Form
+                                        Wizard</span></a>
+                            </li>
+                            <li><a href="form-validation.html"><i class="fa fa-exclamation"></i><span class="submenu-title">Form
+                                        Validation</span></a>
+                            </li>
+                            <li><a href="form-multiple-file-upload.html"><i class="fa fa-upload"></i><span class="submenu-title">Multiple
+                                        File Upload</span></a>
+                            </li>
+                            <li><a href="form-dropzone-file-upload.html"><i class="fa fa-cloud-upload"></i><span class="submenu-title">Dropzone
+                                        File Upload</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-th-list fa-fw">
+                                <div class="icon-bg bg-blue"></div>
+                            </i><span class="menu-title">Tables</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="table-basic.html"><i class="fa fa-th-large"></i><span class="submenu-title">Basic
+                                        Tables</span></a>
+                            </li>
+                            <li><a href="table-responsive.html"><i class="fa fa-tablet"></i><span class="submenu-title">Responsive
+                                        Tables</span></a>
+                            </li>
+                            <li><a href="table-action.html"><i class="fa fa-tencent-weibo"></i><span class="submenu-title">Action
+                                        Tables</span></a>
+                            </li>
+                            <li><a href="table-filter.html"><i class="fa fa-filter"></i><span class="submenu-title">Filter
+                                        Tables</span></a>
+                            </li>
+                            <li><a href="table-advanced.html"><i class="fa fa-indent"></i><span class="submenu-title">Advanced
+                                        Tables</span></a>
+                            </li>
+                            <li><a href="table-export.html"><i class="fa fa-paperclip"></i><span class="submenu-title">Table
+                                        Export</span><span class="label label-yellow">v2.1</span></a>
+                            </li>
+                            <li></li>
+                            <li><a href="table-editable.html"><i class="fa fa-edit"></i><span class="submenu-title">Jeditable</span><span
+                                        class="label label-blue">v2.0 </span></a>
+                            </li>
+                            <li><a href="table-datatables.html"><i class="fa fa-list-alt"></i><span class="submenu-title">DataTables</span><span
+                                        class="label label-pink">v2.0</span></a>
+                            </li>
+                            <li><a href="table-sample.html"><i class="fa fa-table"></i><span class="submenu-title">Sample
+                                        Tables</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-database fa-fw">
+                                <div class="icon-bg bg-red"></div>
+                            </i><span class="menu-title">Data Grids</span><span class="fa arrow"></span><span class="label label-yellow">Hot</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#"><i class="fa fa-th-large"></i><span class="submenu-title">Layout Examples</span><span
+                                        class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level collapse">
+                                    <li><a href="grid-layout-div.html"><i class="fa fa-angle-right"></i><span class="submenu-title">DIVs
+                                                Layout</span></a>
+                                    </li>
+                                    <li><a href="grid-layout-table-1.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Table
+                                                Demo 1</span></a>
+                                    </li>
+                                    <li><a href="grid-layout-table-2.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Table
+                                                Demo 2</span></a>
+                                    </li>
+                                    <li><a href="grid-layout-2-table.html"><i class="fa fa-angle-right"></i><span class="submenu-title">2
+                                                Tables on the Page</span></a>
+                                    </li>
+                                    <li><a href="grid-layout-ul-li.html"><i class="fa fa-angle-right"></i><span class="submenu-title">UL
+                                                LI</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-tencent-weibo"></i><span class="submenu-title">Actions
+                                        Examples</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level collapse">
+                                    <li><a href="grid-filter-with-ul-li.html"><i class="fa fa-angle-right"></i><span
+                                                class="submenu-title">Filters With UL/LI</span></a>
+                                    </li>
+                                    <li><a href="grid-filter-with-select.html"><i class="fa fa-angle-right"></i><span
+                                                class="submenu-title">Filters With SELECT</span></a>
+                                    </li>
+                                    <li><a href="grid-double-sort.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Double
+                                                Sort</span></a>
+                                    </li>
+                                    <li><a href="grid-deep-linking.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Deep
+                                                Linking</span></a>
+                                    </li>
+                                    <li><a href="grid-pagination-only.html"><i class="fa fa-angle-right"></i><span
+                                                class="submenu-title">Pagination Only</span></a>
+                                    </li>
+                                    <li><a href="grid-without-item-per-page.html"><i class="fa fa-angle-right"></i><span
+                                                class="submenu-title">Without "Items per Page"</span></a>
+                                    </li>
+                                    <li><a href="grid-hidden-sort.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Hidden
+                                                Sort</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-table"></i><span class="submenu-title">jPList with jQuery
+                                        UI</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level collapse">
+                                    <li><a href="grid-range-slider.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Range
+                                                Slider</span></a>
+                                    </li>
+                                    <li><a href="grid-datepicker.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Date
+                                                Picker Filter</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-file-o fa-fw">
+                                <div class="icon-bg bg-yellow"></div>
+                            </i><span class="menu-title">Pages</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="page-gallery.html"><i class="fa fa-suitcase"></i><span class="submenu-title">Gallery</span></a>
+                            </li>
+                            <li><a href="page-timeline.html"><i class="fa fa-steam"></i><span class="submenu-title">Timeline</span></a>
+                            </li>
+                            <li><a href="page-blog.html"><i class="fa fa-puzzle-piece"></i><span class="submenu-title">Blog</span></a>
+                            </li>
+                            <li><a href="page-blog-item.html"><i class="fa fa-chain"></i><span class="submenu-title">Blog
+                                        Item</span></a>
+                            </li>
+                            <li><a href="page-about.html"><i class="fa fa-group"></i><span class="submenu-title">About
+                                        Us</span></a>
+                            </li>
+                            <li><a href="page-contact.html"><i class="fa fa-send-o"></i><span class="submenu-title">Contact
+                                        Us</span></a>
+                            </li>
+                            <li><a href="page-calendar.html"><i class="fa fa-calendar"></i><span class="submenu-title">Full
+                                        Calendar</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gift fa-fw">
+                                <div class="icon-bg bg-grey"></div>
+                            </i><span class="menu-title">Extras</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="extra-profile.html"><i class="fa fa-user"></i><span class="submenu-title">User
+                                        Profile</span></a>
+                            </li>
+                            <li><a href="extra-signin.html"><i class="fa fa-sign-in"></i><span class="submenu-title">Sign
+                                        In</span></a>
+                            </li>
+                            <li><a href="extra-signup.html"><i class="fa fa-sign-out"></i><span class="submenu-title">Sign
+                                        Up</span></a>
+                            </li>
+                            <li><a href="extra-lock-screen.html"><i class="fa fa-lock"></i><span class="submenu-title">Lock
+                                        Screen</span></a>
+                            </li>
+                            <li><a href="extra-user-list.html"><i class="fa fa-user"></i><span class="submenu-title">User
+                                        List</span><span class="label label-yellow">v2.1</span></a>
+                            </li>
+                            <li><a href="extra-invoice.html"><i class="fa fa-print"></i><span class="submenu-title">Invoice</span></a>
+                            </li>
+                            <li><a href="extra-faq.html"><i class="fa fa-graduation-cap"></i><span class="submenu-title">FAQ</span></a>
+                            </li>
+                            <li><a href="extra-pricing-table.html"><i class="fa fa-money"></i><span class="submenu-title">Pricing
+                                        Tables</span></a>
+                            </li>
+                            <li><a href="extra-blank.html"><i class="fa fa-file-o"></i><span class="submenu-title">Blank</span></a>
+                            </li>
+                            <li><a href="extra-404.html"><i class="fa fa-exclamation-circle"></i><span class="submenu-title">404
+                                        Page</span></a>
+                            </li>
+                            <li><a href="extra-500.html"><i class="fa fa-exclamation-circle"></i><span class="submenu-title">500
+                                        Page</span></a>
+                            </li>
+                            <li><a href="javascript:void(0)" title="FullScreen" class="btn-fullscreen"><i class="fa fa-arrows"></i><span
+                                        class="submenu-title">Full Screen</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-sitemap fa-fw">
+                                <div class="icon-bg bg-dark"></div>
+                            </i><span class="menu-title">Multi-Level Dropdown</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#"><i class="fa fa-angle-right"></i><span class="submenu-title">Second Level
+                                        Item</span></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i><span class="submenu-title">Second Level
+                                        Item</span></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i><span class="submenu-title">Third Level</span><span
+                                        class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level collapse">
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Third
+                                                Level Item</span></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Third
+                                                Level Item</span></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i><span class="submenu-title">
+                                                Third Level Item</span></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i><span class="submenu-title">Third
+                                                Level Item</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-envelope-o">
+                                <div class="icon-bg bg-primary"></div>
+                            </i><span class="menu-title">Email</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="email-inbox.html"><i class="fa fa-inbox"></i><span class="submenu-title">Inbox</span></a>
+                            </li>
+                            <li><a href="email-compose-mail.html"><i class="fa fa-pencil"></i><span class="submenu-title">Compose
+                                        Mail</span></a>
+                            </li>
+                            <li><a href="email-view-mail.html"><i class="fa fa-eye"></i><span class="submenu-title">View
+                                        Mail</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-bar-chart-o fa-fw">
+                                <div class="icon-bg bg-orange"></div>
+                            </i><span class="menu-title">Charts</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="charts-flotchart.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Flot
+                                        Charts</span></a>
+                            </li>
+                            <li><a href="charts-chartjs.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Chartjs</span></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i><span class="submenu-title">HighCharts</span><span
+                                        class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level collapse">
+                                    <li><a href="charts-highchart-line.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Line Charts</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-area.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Area Charts</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-column-bar.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Column &amp; Bar Charts</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-pie.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Pie Charts</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-scatter-bubble.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Scatter &amp; Bubble Charts</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-dynamic.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Dynamic Charts</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-combinations.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">Combinations</span></a>
+                                    </li>
+                                    <li><a href="charts-highchart-more.html"><i class="fa fa-angle-double-right"></i><span
+                                                class="submenu-title">More Chart Types</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="animations.html"><i class="fa fa-slack fa-fw">
+                                <div class="icon-bg bg-green"></div>
+                            </i><span class="menu-title">Animations</span></a>
+                    </li>
+                    <!--li.charts-sum<div id="ajax-loaded-data-sidebar"></div>-->
+                </ul>
             </div>
         </div>
-        <div class="footer">
-            <span>2019 © smadle - 通用后台模板</span>
+        <div class="home-right">
+            <div class="home-top">
+                <div class="page-header pull-left">
+                    <div class="page-title">Dashboard</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-left">
+                    <li><i class="fa fa-home"></i>&nbsp;<a href="index.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="hidden"><a href="#">Dashboard</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="active">Dashboard</li>
+                </ol>
+                <div class="btn btn-blue reportrange"><i class="fa fa-calendar"></i>&nbsp;<span>January 3, 2019 -
+                        February 1, 2019</span>&nbsp;report&nbsp;<i class="fa fa-angle-down"></i>
+                    <input type="hidden" name="datestart">
+                    <input type="hidden" name="endstart">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="home-main">
+
+                <div id="sum_box" class="row mbl">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="panel profit db mbm">
+                            <div class="panel-body">
+                                <p class="icon"><i class="icon fa fa-shopping-cart"></i>
+                                </p>
+                                <h4 class="value"><span data-counter="" data-start="10" data-end="50" data-step="1"
+                                        data-duration="0">189</span><span>$</span></h4>
+                                <p class="description">Profit description</p>
+                                <div class="progress progress-sm mbn">
+                                    <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 80%;" class="progress-bar progress-bar-success"><span class="sr-only">80%
+                                            Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="panel income db mbm">
+                            <div class="panel-body">
+                                <p class="icon"><i class="icon fa fa-money"></i>
+                                </p>
+                                <h4 class="value"><span>812</span><span>$</span></h4>
+                                <p class="description">Income detail</p>
+                                <div class="progress progress-sm mbn">
+                                    <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 60%;" class="progress-bar progress-bar-info"><span class="sr-only">60%
+                                            Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="panel task db mbm">
+                            <div class="panel-body">
+                                <p class="icon"><i class="icon fa fa-signal"></i>
+                                </p>
+                                <h4 class="value"><span>155</span></h4>
+                                <p class="description">Task completed</p>
+                                <div class="progress progress-sm mbn">
+                                    <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 50%;" class="progress-bar progress-bar-danger"><span class="sr-only">50%
+                                            Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="panel visit db mbm">
+                            <div class="panel-body">
+                                <p class="icon"><i class="icon fa fa-group"></i>
+                                </p>
+                                <h4 class="value"><span>376</span></h4>
+                                <p class="description">Visitor description</p>
+                                <div class="progress progress-sm mbn">
+                                    <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 70%;" class="progress-bar progress-bar-warning"><span class="sr-only">70%
+                                            Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mbl">
+                    <div class="col-lg-8">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h4 class="mbs text-uppercase">Network Performance</h4>
+                                        <p class="help-block">Sed ut perspiciatis unde omnis iste natus error sit
+                                            voluptatem...</p>
+                                        <div id="area-chart-spline" style="width: 100%; height: 300px; padding: 0px; position: relative;"><canvas
+                                                class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 509px; height: 300px;"
+                                                width="636" height="375"></canvas>
+                                            <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                                                <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                                    <div style="position: absolute; top: 284px; left: 17px;" class="flot-tick-label tickLabel">Jan</div>
+                                                    <div style="position: absolute; top: 284px; left: 95px;" class="flot-tick-label tickLabel">Feb</div>
+                                                    <div style="position: absolute; top: 284px; left: 173px;" class="flot-tick-label tickLabel">Mar</div>
+                                                    <div style="position: absolute; top: 284px; left: 253px;" class="flot-tick-label tickLabel">Apr</div>
+                                                    <div style="position: absolute; top: 284px; left: 330px;" class="flot-tick-label tickLabel">May</div>
+                                                    <div style="position: absolute; top: 284px; left: 411px;" class="flot-tick-label tickLabel">Jun</div>
+                                                    <div style="position: absolute; top: 284px; left: 492px;" class="flot-tick-label tickLabel">Jul</div>
+                                                </div>
+                                                <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                                    <div style="position: absolute; top: 272px; left: 14px;" class="flot-tick-label tickLabel">0</div>
+                                                    <div style="position: absolute; top: 233px; left: 8px;" class="flot-tick-label tickLabel">25</div>
+                                                    <div style="position: absolute; top: 195px; left: 8px;" class="flot-tick-label tickLabel">50</div>
+                                                    <div style="position: absolute; top: 156px; left: 8px;" class="flot-tick-label tickLabel">75</div>
+                                                    <div style="position: absolute; top: 118px; left: 1px;" class="flot-tick-label tickLabel">100</div>
+                                                    <div style="position: absolute; top: 79px; left: 1px;" class="flot-tick-label tickLabel">125</div>
+                                                    <div style="position: absolute; top: 41px; left: 1px;" class="flot-tick-label tickLabel">150</div>
+                                                    <div style="position: absolute; top: 3px; left: 1px;" class="flot-tick-label tickLabel">175</div>
+                                                </div>
+                                            </div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 509px; height: 300px;"
+                                                width="636" height="375"></canvas>
+                                            <div class="legend">
+                                                <div style="position: absolute; width: 70px; height: 38px; top: 15px; right: 16px; background-color: rgb(255, 255, 255); opacity: 0.85;">
+                                                </div>
+                                                <table style="position:absolute;top:15px;right:16px;;font-size:smaller;color:#545454">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="legendColorBox">
+                                                                <div style="border:1px solid #ccc;padding:1px">
+                                                                    <div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="legendLabel">Upload</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="legendColorBox">
+                                                                <div style="border:1px solid #ccc;padding:1px">
+                                                                    <div style="width:4px;height:0;border:5px solid #01b6ad;overflow:hidden"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="legendLabel">Download</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4 class="mbm text-uppercase">Server Status</h4><span class="task-item">CPU
+                                            Usage (25 - 32 cpus)<small class="pull-right text-muted">40%</small>
+                                            <div class="progress progress-sm">
+                                                <div role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 40%;" class="progress-bar progress-bar-orange"><span
+                                                        class="sr-only">40% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </span><span>Memory Usage (2.5GB)<small class="pull-right text-muted">60%</small>
+                                            <div class="progress progress-sm">
+                                                <div role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-blue"><span
+                                                        class="sr-only">60% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </span><span>Disk Usage (C:\ 120GB , D:\ 430GB)<small class="pull-right text-muted">55%</small>
+                                            <div class="progress progress-sm">
+                                                <div role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 55%;" class="progress-bar progress-bar-green"><span
+                                                        class="sr-only">55% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </span><span>Domain (2/5)<small class="pull-right text-muted">66%</small>
+                                            <div class="progress progress-sm">
+                                                <div role="progressbar" aria-valuenow="66" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 66%;" class="progress-bar progress-bar-yellow"><span
+                                                        class="sr-only">66% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </span><span>Database (90/100)<small class="pull-right text-muted">90%</small>
+                                            <div class="progress progress-sm">
+                                                <div role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 90%;" class="progress-bar progress-bar-pink"><span
+                                                        class="sr-only">90% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </span><span>Email Account (25/50)<small class="pull-right text-muted">50%</small>
+                                            <div class="progress progress-sm">
+                                                <div role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 50%;" class="progress-bar progress-bar-violet"><span
+                                                        class="sr-only">50% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="portlet box prolet-primary">
+                            <div class="portlet-header">
+                                <div class="caption text-uppercase"> <i style="font-size: 17px; margin-top: 2px;" class="fa fa-comments"></i>Chats</div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 270px;">
+                                    <div class="chat-scroller" style="overflow: hidden; width: 100%; height: 270px;">
+                                        <ul class="chats">
+                                            <li class="in"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg"
+                                                    class="avatar img-responsive">
+                                                <div class="message"><span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
+                                                        class="chat-datetime">at July 06, 2014 17:06</span><span class="chat-body">Lorem
+                                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                                        erat volutpat.</span>
+                                                </div>
+                                            </li>
+                                            <li class="out"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg"
+                                                    class="avatar img-responsive">
+                                                <div class="message"><span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
+                                                        class="chat-datetime">at July 06, 2014 18:06</span><span class="chat-body">Lorem
+                                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                                        erat volutpat.</span>
+                                                </div>
+                                            </li>
+                                            <li class="in"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg"
+                                                    class="avatar img-responsive">
+                                                <div class="message"><span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
+                                                        class="chat-datetime">at July 06, 2014 17:06</span><span class="chat-body">Lorem
+                                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                                        erat volutpat.</span>
+                                                </div>
+                                            </li>
+                                            <li class="out"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg"
+                                                    class="avatar img-responsive">
+                                                <div class="message"><span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
+                                                        class="chat-datetime">at July 06, 2014 18:06</span><span class="chat-body">Lorem
+                                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                                        erat volutpat.</span>
+                                                </div>
+                                            </li>
+                                            <li class="in"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg"
+                                                    class="avatar img-responsive">
+                                                <div class="message"><span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
+                                                        class="chat-datetime">at July 06, 2014 17:06</span><span class="chat-body">Lorem
+                                                        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                                        erat volutpat.</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 108.16px;"></div>
+                                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                                <div class="chat-form">
+                                    <div class="input-group">
+                                        <input id="input-chat" type="text" placeholder="Type a message here..." class="form-control"><span
+                                            id="btn-chat" class="input-group-btn"><button type="button" class="btn btn-green"><i
+                                                    class="fa fa-check"></i></button></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mbl">
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <div class="panel-body pan">
+                                <div class="profile">
+                                    <div class="user-info">
+                                        <div style="margin-bottom: 15px" class="row">
+                                            <div class="col-xs-12 col-sm-8">
+                                                <h2>John Doe</h2>
+                                                <p><strong>About:</strong> Web Designer / UI.</p>
+                                                <p><strong>Hobbies:</strong> Read, out with friends, listen to music,
+                                                    draw and learn new things.</p>
+                                                <p><strong class="mrs">Skills:</strong><span class="label label-green mrs">html5</span><span
+                                                        class="label label-green mrs">css3</span><span class="label label-green mrs">jquery</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 text-center">
+                                                <figure><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg"
+                                                        alt="" style="display: inline-block" class="img-responsive img-circle">
+                                                    <figcaption class="ratings">
+                                                        <p><a href="#"><span class="fa fa-star"></span></a><a href="#"><span
+                                                                    class="fa fa-star"></span></a><a href="#"><span
+                                                                    class="fa fa-star"></span></a><a href="#"><span
+                                                                    class="fa fa-star"></span></a><a href="#"><span
+                                                                    class="fa fa-star-o"></span></a>
+                                                        </p>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-action">
+                                        <div class="row text-center divider">
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <h2><strong> 20,7K</strong></h2>
+                                                <p><small>Followers</small>
+                                                </p>
+                                                <button class="btn btn-yellow btn-block">Follow</button>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <h2><strong>43</strong></h2>
+                                                <p><small>Snippets</small>
+                                                </p>
+                                                <div class="btn-group dropdown">
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-orange dropdown-toggle">Options&nbsp;<i
+                                                            class="fa fa-angle-down"></i>
+                                                    </button>
+                                                    <ul role="menu" class="dropdown-menu text-left">
+                                                        <li><a href="#"><span class="fa fa-envelope"></span>&nbsp;
+                                                                Send an email</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="fa fa-list"></span>&nbsp;
+                                                                Add or remove from a list</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#"><span class="fa fa-warning"></span>&nbsp;
+                                                                Report this user for spam</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <h2><strong>245</strong></h2>
+                                                <p><small>Following</small>
+                                                </p>
+                                                <button class="btn btn-blue btn-block">Profile</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="portlet box">
+                            <div class="portlet-header prolet-primary">
+                                <div class="caption text-uppercase"> <i style="font-size: 17px; margin-top: 2px;" class="fa fa-list-alt"></i>Todo
+                                    List</div>
+                            </div>
+                            <div style="overflow: hidden;" class="portlet-body">
+                                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 250px;">
+                                    <ul class="todo-list sortable ui-sortable" style="overflow: hidden; width: 100%; height: 250px;">
+                                        <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                            <div class="todo-check pull-left">
+                                                <div class="icheckbox_minimal-grey" style="position: relative;"><input
+                                                        type="checkbox" value="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"><ins
+                                                        class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                                            </div>
+                                            <div class="todo-title">Sed ut perspiciatis unde omnis iste</div>
+                                            <div class="todo-actions pull-right clearfix"><a href="#" class="todo-complete"><i
+                                                        class="fa fa-check"></i></a><a href="#" class="todo-edit"><i
+                                                        class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i
+                                                        class="fa fa-trash-o"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                            <div class="todo-check pull-left">
+                                                <div class="icheckbox_minimal-grey" style="position: relative;"><input
+                                                        type="checkbox" value="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"><ins
+                                                        class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                                            </div>
+                                            <div class="todo-title">At vero eos et accusamus et iusto odio dignissimos
+                                                ducimus qui blanditiis praesentium</div>
+                                            <div class="todo-actions pull-right clearfix"><a href="#" class="todo-complete"><i
+                                                        class="fa fa-check"></i></a><a href="#" class="todo-edit"><i
+                                                        class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i
+                                                        class="fa fa-trash-o"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                            <div class="todo-check pull-left">
+                                                <div class="icheckbox_minimal-grey" style="position: relative;"><input
+                                                        type="checkbox" value="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"><ins
+                                                        class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                                            </div>
+                                            <div class="todo-title">Nam libero tempore, cum soluta nobis est eligendi
+                                                optio cumque nihil impedit quo minus id</div>
+                                            <div class="todo-actions pull-right clearfix"><a href="#" class="todo-complete"><i
+                                                        class="fa fa-check"></i></a><a href="#" class="todo-edit"><i
+                                                        class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i
+                                                        class="fa fa-trash-o"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                            <div class="todo-check pull-left">
+                                                <div class="icheckbox_minimal-grey" style="position: relative;"><input
+                                                        type="checkbox" value="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"><ins
+                                                        class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                                            </div>
+                                            <div class="todo-title">Et harum quidem rerum facilis est</div>
+                                            <div class="todo-actions pull-right clearfix"><a href="#" class="todo-complete"><i
+                                                        class="fa fa-check"></i></a><a href="#" class="todo-edit"><i
+                                                        class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i
+                                                        class="fa fa-trash-o"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                            <div class="todo-check pull-left">
+                                                <div class="icheckbox_minimal-grey" style="position: relative;"><input
+                                                        type="checkbox" value="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"><ins
+                                                        class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                                            </div>
+                                            <div class="todo-title">Neque porro quisquam est, qui dolorem ipsum quia
+                                                dolor sit amet</div>
+                                            <div class="todo-actions pull-right clearfix"><a href="#" class="todo-complete"><i
+                                                        class="fa fa-check"></i></a><a href="#" class="todo-edit"><i
+                                                        class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i
+                                                        class="fa fa-trash-o"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                            <div class="todo-check pull-left">
+                                                <div class="icheckbox_minimal-grey" style="position: relative;"><input
+                                                        type="checkbox" value="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"><ins
+                                                        class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                                            </div>
+                                            <div class="todo-title">Excepteur sint occaecat cupidatat non proident</div>
+                                            <div class="todo-actions pull-right clearfix"><a href="#" class="todo-complete"><i
+                                                        class="fa fa-check"></i></a><a href="#" class="todo-edit"><i
+                                                        class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i
+                                                        class="fa fa-trash-o"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 205.592px;"></div>
+                                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mtxl">
+                    <div class="col-lg-8">
+                        <div class="timeline-centered timeline-sm">
+                            <article class="timeline-entry">
+                                <div class="timeline-entry-inner">
+                                    <time datetime="2014-01-10T03:45" class="timeline-time"><span>12:45 AM</span><span>Today</span>
+                                    </time>
+                                    <div class="timeline-icon bg-violet"><i class="fa fa-exclamation"></i>
+                                    </div>
+                                    <div class="timeline-label">
+                                        <h4 class="timeline-title">New Project</h4>
+                                        <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and
+                                            offered prepare how cordial.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="timeline-entry left-aligned">
+                                <div class="timeline-entry-inner">
+                                    <time datetime="2014-01-10T03:45" class="timeline-time"><span>9:15 AM</span><span>Today</span>
+                                    </time>
+                                    <div class="timeline-icon bg-green"><i class="fa fa-group"></i>
+                                    </div>
+                                    <div class="timeline-label bg-green">
+                                        <h4 class="timeline-title">Job Meeting</h4>
+                                        <p>Caulie dandelion maize lentil collard greens radish arugula sweet pepper
+                                            water spinach kombu courgette.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="timeline-entry">
+                                <div class="timeline-entry-inner">
+                                    <time datetime="2014-01-09T13:22" class="timeline-time"><span>8:20 PM</span><span>04/03/2013</span>
+                                    </time>
+                                    <div class="timeline-icon bg-orange"><i class="fa fa-paper-plane"></i>
+                                    </div>
+                                    <div class="timeline-label bg-orange">
+                                        <h4 class="timeline-title">Daily Feeds</h4>
+                                        <p><img src="http://lorempixel.com/45/45/nature/3/" alt="" class="timeline-img pull-left">Parsley
+                                            amaranth tigernut silver beet maize fennel spinach ricebean black-eyed.
+                                            Tolerably earnestly middleton extremely distrusts she boy now not. Add and
+                                            offered prepare how cordial.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-entry-inner">
+                                    <div style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);"
+                                        class="timeline-icon"><i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="zabuto_calendar_cdt">
+                            <div class="zabuto_calendar" id="zabuto_calendar_cdt">
+                                <table class="table">
+                                    <tbody>
+                                        <tr class="calendar-month-header">
+                                            <th>
+                                                <div class="calendar-month-navigation" id="zabuto_calendar_cdt_nav-prev"><span><span
+                                                            class="glyphicon glyphicon-chevron-left"></span></span></div>
+                                            </th>
+                                            <th colspan="5"><span>February 2019</span></th>
+                                            <th>
+                                                <div class="calendar-month-navigation" id="zabuto_calendar_cdt_nav-next"><span><span
+                                                            class="glyphicon glyphicon-chevron-right"></span></span></div>
+                                            </th>
+                                        </tr>
+                                        <tr class="calendar-dow-header">
+                                            <th>Mon</th>
+                                            <th>Tue</th>
+                                            <th>Wed</th>
+                                            <th>Thu</th>
+                                            <th>Fri</th>
+                                            <th>Sat</th>
+                                            <th>Sun</th>
+                                        </tr>
+                                        <tr class="calendar-dow">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td id="zabuto_calendar_cdt_2019-02-01">
+                                                <div id="zabuto_calendar_cdt_2019-02-01_day" class="day">1</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-02">
+                                                <div id="zabuto_calendar_cdt_2019-02-02_day" class="day">2</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-03">
+                                                <div id="zabuto_calendar_cdt_2019-02-03_day" class="day">3</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="calendar-dow">
+                                            <td id="zabuto_calendar_cdt_2019-02-04">
+                                                <div id="zabuto_calendar_cdt_2019-02-04_day" class="day">4</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-05">
+                                                <div id="zabuto_calendar_cdt_2019-02-05_day" class="day">5</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-06">
+                                                <div id="zabuto_calendar_cdt_2019-02-06_day" class="day">6</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-07">
+                                                <div id="zabuto_calendar_cdt_2019-02-07_day" class="day">7</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-08">
+                                                <div id="zabuto_calendar_cdt_2019-02-08_day" class="day">8</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-09">
+                                                <div id="zabuto_calendar_cdt_2019-02-09_day" class="day">9</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-10">
+                                                <div id="zabuto_calendar_cdt_2019-02-10_day" class="day">10</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="calendar-dow">
+                                            <td id="zabuto_calendar_cdt_2019-02-11">
+                                                <div id="zabuto_calendar_cdt_2019-02-11_day" class="day">11</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-12">
+                                                <div id="zabuto_calendar_cdt_2019-02-12_day" class="day">12</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-13">
+                                                <div id="zabuto_calendar_cdt_2019-02-13_day" class="day">13</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-14">
+                                                <div id="zabuto_calendar_cdt_2019-02-14_day" class="day">14</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-15">
+                                                <div id="zabuto_calendar_cdt_2019-02-15_day" class="day">15</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-16">
+                                                <div id="zabuto_calendar_cdt_2019-02-16_day" class="day">16</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-17">
+                                                <div id="zabuto_calendar_cdt_2019-02-17_day" class="day">17</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="calendar-dow">
+                                            <td id="zabuto_calendar_cdt_2019-02-18">
+                                                <div id="zabuto_calendar_cdt_2019-02-18_day" class="day">18</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-19">
+                                                <div id="zabuto_calendar_cdt_2019-02-19_day" class="day">19</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-20">
+                                                <div id="zabuto_calendar_cdt_2019-02-20_day" class="day">20</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-21">
+                                                <div id="zabuto_calendar_cdt_2019-02-21_day" class="day">21</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-22">
+                                                <div id="zabuto_calendar_cdt_2019-02-22_day" class="day">22</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-23">
+                                                <div id="zabuto_calendar_cdt_2019-02-23_day" class="day">23</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-24">
+                                                <div id="zabuto_calendar_cdt_2019-02-24_day" class="day">24</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="calendar-dow">
+                                            <td id="zabuto_calendar_cdt_2019-02-25">
+                                                <div id="zabuto_calendar_cdt_2019-02-25_day" class="day">25</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-26">
+                                                <div id="zabuto_calendar_cdt_2019-02-26_day" class="day">26</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-27">
+                                                <div id="zabuto_calendar_cdt_2019-02-27_day" class="day">27</div>
+                                            </td>
+                                            <td id="zabuto_calendar_cdt_2019-02-28">
+                                                <div id="zabuto_calendar_cdt_2019-02-28_day" class="day">28</div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="legend" id="zabuto_calendar_cdt_legend"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </body>
+    </div>
+    <div class="home-footer">
+        <span>2019 © smadle - 通用后台模板</span>
+    </div>
+</body>
+
 </html>
